@@ -22,22 +22,38 @@
       </div> <!-- /.container -->
     </nav> <!-- /.navbar -->
 
-    <div class="container-alternate">
-      <div class="container">
-        <h3 id="about" class="subhead"></h3>
-        <h2 id="about" class="subhead"> </h2>
-        <div class="row about">
-          <div class="col-md-10 col-md-offset-1 text-center">
+       <br><br><br><br><br><br><br><br><br><br><br><br>
+      <div id="projlist" class="list-group">
+        <a href="<?= base_url() ?>project/view/<?= $data->pro_id ?>" class="list-group-item">
+         <?php echo $data->pro_name ?>
+        </a>
+        <!-- <a href="<?= base_url() ?>project/discussion/<?= $data->pro_id ?>" class="list-group-item">Discussion</a> -->
+        <a href="<?= base_url() ?>project/todo/<?= $data->pro_id ?>" class="list-group-item active">To-do list</a>
+        <!-- <a href="<?= base_url() ?>project/file/<?= $data->pro_id ?>" class="list-group-item">File</a>
+        <a href="<?= base_url() ?>project/text/<?= $data->pro_id ?>" class="list-group-item">Text Document</a>
+        <a href="<?= base_url() ?>project/event/<?= $data->pro_id ?>" class="list-group-item">Event</a> -->
+      </div>
 
-            <br><br>
+<div class="col-md-2 col-md-offset-1 text-center">&nbsp;</div>
+    <div class="col-md-6 col-md-offset-1 text-center" style="margin-top:-340px">
+
+            <br><br><br><br><br><br>
             <div class="container">
+              <?php
+                if (isset($_GET['error']) && $_GET['error'] == 1) {
+                  echo "<p style='color:red'>Sorry We cannot find that project, create new instead!</p>";
+                }
+                if (isset($_GET['error']) && $_GET['error'] == 2) {
+                  echo "<p style='color:red'>Something went wrong with the URL, create new project instead!</p>";
+                }
+              ?>
+
               <div class="row colored">
-                <h2>Discussion</h2>
-                
+                <h2>Comments</h2>
+
+                <br/><br/><hr/>
               </div>
             </div>
+          </div> <!-- /.col-md-10 --> 
 
-          </div> <!-- /.col-md-10 -->
-        </div> <!-- /.row -->
-      </div> <!-- /.container -->
-    </div> <!-- /.container-alternate -->
+      <br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

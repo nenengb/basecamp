@@ -53,7 +53,7 @@
                 <?php
                 //var_dump($todo);
                   foreach ($todo as $key => $value) {
-                   echo "<p><span class='glyphicon glyphicon-list'></span>&nbsp;&nbsp;&nbsp;<a href='".base_url()."comments/view/".$value->todo_id."'>".$value->todo_title."</a> <code>".$value->todo_assign."</code>&nbsp;&nbsp;&nbsp;<a href='".$id."/".$value->todo_id."'><span class='glyphicon glyphicon-pencil'></span></a><br/>Due date <code> ".$value->due_date."</code></p>";
+                   echo "<p><span class='glyphicon glyphicon-list'></span>&nbsp;&nbsp;&nbsp;<a href='".base_url()."comments/view/".$id."/".$value->todo_id."'>".$value->todo_title."</a> <code>".$value->todo_assign."</code>&nbsp;&nbsp;&nbsp;<a href='".$id."/".$value->todo_id."'><span class='glyphicon glyphicon-pencil'></span></a><br/>Due date <code> ".$value->due_date."</code></p>";
                   }
                 ?>
                 <br/><br/><hr/>
